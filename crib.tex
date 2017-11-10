@@ -39,7 +39,7 @@
     \item \textbf{Axioms of probability}
     \item $P(a) \ge 0$
     \item $P(true) = 1$
-    \item $P(a \land b) = P(a) + P(b)$ if $a$ and $b$ are mutually exclusive
+    \item $P(a \lor b) = P(a) + P(b)$ if $a$ and $b$ are mutually exclusive
 \end{itemize}
 
 \begin{itemize}
@@ -65,8 +65,30 @@
         $E_P(f) = P(a) = \sum_{\omega:\ a\ true\ in\ \omega} P(\omega)$
     \item Conditional Expected Value: $E_P(f \mid e) = \sum_{\omega \in \Omega} f(\omega) * P(\omega \mid e)$
     \item Independence: $X$ is \textit{independent} of $Y$ if $P(X \mid YZ) = P(X \mid Z)$
-    \item Discounted Reward: $V_1 = r_1 + \gamma r_2 + \gamma^2 r_3 + \ldots + \gamma^{n-1} r_n$, which implies $V_i = r_i + \gamma V_{i+1}$. Note that $n$ may be $\infty$
+    \item Discounted Reward: $V_1 = r_1 + \gamma r_2 + \gamma^2 r_3 + \cdots + \gamma^{n-1} r_n$, which implies $V_i = r_i + \gamma V_{i+1}$. Note that $n$ may be $\infty$. $V$ converges in most cases where $\gamma < 1$
+    \item Value of a Policy: $V^{\Pi}(s)$ (which means value of $\Pi$ at $s$) $\implies$ what reward you can expect if you start at $s$ and follow policy $\Pi$
 \end{itemize}
+
+\begin{itemize}
+    \item \textbf{Belief Networks and Markov Chains}
+    \item \textit{Stationary Markov Chain:} dynamics are the same for every arrow
+    \item \textit{Ergodic Markov Chain:} any state has a non-zero probability of being reached from any state
+    \item \textit{Periodic Markov Chain:} states can only be reached during regularly occurring times
+    \item All Markov Chains have an equivalent stationary chain
+    \item Belief Networks only have states
+    \item Markov Chains and Hidden Markov Models are special types of belief networks
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{Utility Theory}
+    \item \textit{completeness:} every outcome can be compared to all others
+    \item \textit{lottery:} probability distribution over outcomes
+    \item \textit{decomposability:} no preference between lotteries with equivalent outcomes and probability distributions
+    \item \textit{substitutability:} no preference between decomposable lotteries where an outcome in one lottery is different from its corresponding outcome in the other lottery if both outcomes have equivalent utilities
+    \item \textit{money pump:} $a \succ a$, $b \succ c$, $c \succ a$ (cycle that breaks transitivity)
+    \item Utility $\sim$ Expected Value, math-wise
+\end{itemize}
+
 
 
 \end{multicols}
