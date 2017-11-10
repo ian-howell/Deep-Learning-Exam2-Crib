@@ -24,6 +24,8 @@
 
 \begin{document}
 
+\begin{multicols}{2}
+
 \begin{itemize}
     \item \textbf{Formulas}
     \item Conditional Probability: $P(e \land h) = P(e \mid h) * P(h)$
@@ -48,5 +50,21 @@
     \item If $a \leftrightarrow b$ then $P(a) = P(b)$
     \item $P(a) = P(a \land b) + P(a \land \lnot b) = \sum_{b \in B}(a \land b)$
 \end{itemize}
+
+\begin{itemize}
+    \item \textbf{Concepts}
+    \item Random Variables: $P(X)$ is a function from the domain of $X$ to $[0 \ldots 1]$, e.g.\ $P_X(32) = P(X=32)$
+    \item Expected Value: Let $f(w)$ be a function on worlds. Given a probability measure $P$, the expected value of $f \in P$ is $E_P(f) = \sum_{\omega \in \Omega} f(w) * P(w)$
+    \item Expected Value Special Case: \\
+        \[ f(\omega) =
+        \begin{cases}
+            1 & if\ a\ is\ true\ in\ \omega \\
+            0 & if\ a\ is\ false\ in\ \omega
+        \end{cases}
+        \]
+\end{itemize}
+
+
+\end{multicols}
 
 \end{document}
