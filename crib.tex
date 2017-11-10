@@ -31,7 +31,7 @@
     \item Conditional Probability: $P(e \land h) = P(e \mid h) * P(h)$
     \item Bayes' Rule: $P(e \mid h) * P(h) = P(h \mid e) * P(e)$
     \item Chain Rule: $P(a_1 \land a_2 \land a_3) = P(a_1 \mid a_2 \land a_3) * P(a_2 \mid a_3) * P(a_3)$
-    \item Filtering Formula: $P(s_i \mid o_{0 \ldots i} = \frac{P(o_i \mid s_i) * \sum_{s_{i-1} \in S_{i-1}} P(s_i \mid s_{i-1}) * P(s_{i-1} \mid o_{0 \ldots 1}) * P(o_{0 \ldots i-1})}{P(o_{0 \ldots i})}$ \\
+    \item Filtering Formula: $P(s_i \mid o_{0 \ldots i}) = \frac{P(o_i \mid s_i) * \sum_{s_{i-1} \in S_{i-1}} P(s_i \mid s_{i-1}) * P(s_{i-1} \mid o_{0 \ldots 1}) * P(o_{0 \ldots i-1})}{P(o_{0 \ldots i})}$ \\
         where $P(o_{0 \ldots i})$ means $P(o_0 \land o_1 \land \cdots \land o_i)$
 \end{itemize}
 
