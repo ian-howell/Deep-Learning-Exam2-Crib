@@ -1,0 +1,42 @@
+%----------------------------------------------------------------------------------------
+% PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[9pt,landscape]{memoir}
+\usepackage[landscape]{geometry}
+\usepackage{amssymb,amsmath,verbatim,graphicx,microtype,upquote,units,booktabs,siunitx,setspace,graphicx,enumitem,siunitx,ifthen,calc,multicol,listings,xcolor}
+\usepackage[absolute]{textpos}
+
+\ifthenelse{\lengthtest {\paperwidth = 11in}}
+    {\geometry{top=.1in,left=.2in,right=.2in,bottom=.1in}}
+    {\ifthenelse{\lengthtest{ \paperwidth = 297mm}}
+        {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm}}
+        {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm}}
+    }
+
+% Change spacing between paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+
+%---------------------------------------------------------------------------------------
+% DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{itemize}
+    \item Conditional Probability: $P(e \land h) = P(e \mid h) * P(h)$
+    \item Bayes' Rule: $P(e \mid h) * P(h) = P(h \mid e) * P(e)$
+    \item Chain Rule: $P(a_1 \land a_2 \land a_3) = P(a_1 \mid a_2 \land a_3) * P(a_2 \mid a_3) * P(a_3)$
+    \item Filtering Formula: $P(s_i \mid o_{0 \ldots i} = \frac{P(o_i \mid s_i) * \sum_{s_{i-1} \in \S_{i-1}} P(s_i \mid s_{i-1}) * P(s_{i-1} \mid o_{0 \ldots 1}) * P(o_{0 \ldots i-1})}{P(o_{0 \ldots i})}$ \\
+        where $P(o_{0 \ldots i})$ means $P(o_0 \land o_1 \land \cdots \land o_i)$
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{Axioms of probability:}
+    \item $P(a) \ge 0$
+    \item $P(true) = 1$
+    \item $P(a \land b) = P(a) + P(b)$ if $a$ and $b$ are mutually exclusive
+\end{itemize}
+
+\end{document}
