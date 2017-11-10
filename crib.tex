@@ -2,7 +2,7 @@
 % PACKAGES AND DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[9pt,landscape]{memoir}
+\documentclass[11pt,landscape]{memoir}
 \usepackage[landscape]{geometry}
 \usepackage{amssymb,amsmath,verbatim,graphicx,microtype,upquote,units,booktabs,siunitx,setspace,graphicx,enumitem,siunitx,ifthen,calc,multicol,listings,xcolor}
 \usepackage[absolute]{textpos}
@@ -25,18 +25,28 @@
 \begin{document}
 
 \begin{itemize}
+    \item \textbf{Formulas}
     \item Conditional Probability: $P(e \land h) = P(e \mid h) * P(h)$
     \item Bayes' Rule: $P(e \mid h) * P(h) = P(h \mid e) * P(e)$
     \item Chain Rule: $P(a_1 \land a_2 \land a_3) = P(a_1 \mid a_2 \land a_3) * P(a_2 \mid a_3) * P(a_3)$
-    \item Filtering Formula: $P(s_i \mid o_{0 \ldots i} = \frac{P(o_i \mid s_i) * \sum_{s_{i-1} \in \S_{i-1}} P(s_i \mid s_{i-1}) * P(s_{i-1} \mid o_{0 \ldots 1}) * P(o_{0 \ldots i-1})}{P(o_{0 \ldots i})}$ \\
+    \item Filtering Formula: $P(s_i \mid o_{0 \ldots i} = \frac{P(o_i \mid s_i) * \sum_{s_{i-1} \in S_{i-1}} P(s_i \mid s_{i-1}) * P(s_{i-1} \mid o_{0 \ldots 1}) * P(o_{0 \ldots i-1})}{P(o_{0 \ldots i})}$ \\
         where $P(o_{0 \ldots i})$ means $P(o_0 \land o_1 \land \cdots \land o_i)$
 \end{itemize}
 
 \begin{itemize}
-    \item \textbf{Axioms of probability:}
+    \item \textbf{Axioms of probability}
     \item $P(a) \ge 0$
     \item $P(true) = 1$
     \item $P(a \land b) = P(a) + P(b)$ if $a$ and $b$ are mutually exclusive
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{Propositions}
+    \item $P(\lnot a) = 1 - P(a)$
+    \item $P(a) = \sum_{x \in domain(X)} P(a \land X = x)$
+    \item $P(a \lor b) = P(a) + P(b) - P(a \land b)$
+    \item If $a \leftrightarrow b$ then $P(a) = P(b)$
+    \item $P(a) = P(a \land b) + P(a \land \lnot b) = \sum_{b \in B}(a \land b)$
 \end{itemize}
 
 \end{document}
